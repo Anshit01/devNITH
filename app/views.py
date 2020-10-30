@@ -6,3 +6,6 @@ def index_handler(request):
 
 def internship_handler(request):
     return render(request, 'internship.html')
+
+def open_source_handler(request):
+    return render(request, 'open_source.html')
