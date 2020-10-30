@@ -16,15 +16,37 @@
 
 .hero-section-btn{
     display: block;
-    background-color:  #8e44ad;
-    color: #fff;
     border-radius: 5px;
     width: 100px;
     padding: 5px 10px 5px 10px;
     text-align: center;
 }
 
-.hero-section-btn:hover{
+.hero-section-btn:active, .hero-section-btn:active:focus, .hero-section-btn:focus{
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-filled{
+    background-color:  #8e44ad;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.btn-filled:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-hollow{
+    border:  2px solid #8e44ad !important;
+    color: #8e44ad;
+    font-weight: 600;
+}
+
+.btn-hollow:hover{
+    color: #8e44ad;
     text-decoration: none;
 }
 
@@ -37,6 +59,7 @@
 .cards-section{
     padding-top: 50px;
     padding-bottom: 50px;
+    background-color: #f6ebff;
 }
 
 .intern-section-heading{
@@ -51,9 +74,9 @@
 
 
 .card-head {
-    background-color: #9b59b6;
+    background-color: #3c096c;
     border-radius: 5px 5px 0 0;
-    padding: 20px;
+    padding: 40px;
 }
 
 .card-title {
@@ -66,31 +89,88 @@
 .card-time {
     font-size: 14px;
     color: #d6d8d8;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 .card-apply-btn {
-    background-color: #8b1eb9;
+    background-color: #7b2cbf;
     width: fit-content;
     padding: 5px 10px;
     color: #e2e3e4;
     font-weight: 500;
+    border-radius: 5px;
 }
 
 .card-foot {
     border: 2px solid #ddd;
     border-top: none;
     border-radius: 0 0 5px 5px;
-    padding: 20px;
+    padding: 40px;
 }
 
 .card-tags {
-    color: #555 !important;
+    color: #8090BD !important;
+}
+
+.tech-tag{
+    padding: 8px 5px;
+}
+
+.img-tag{
+    width: 10%;
 }
 
 .card-description {
     margin-top: 10px;
     margin-bottom: 0;
+}
+
+/* open source section */
+
+.open-source-section{
+    background-color: #10002b;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.open-source-notification{
+    padding-top: 50px;
+}
+
+.open-source-latest{
+    color: #e0aaff;
+}
+
+.open-source-projects{
+    color: #fff;
+}
+
+hr{
+    background-color: #e0aaff;
+}
+
+.open-source-heading{
+    color: #fff;
+    padding-top: 250px;
+    padding-left: 70px;
+}
+
+.arrow-img{
+    width: 30%;
+    fill: #fff;
+    float: right;
+    margin-right: 15px;
+}
+
+
+
+.project-card{
+    display: flex;
+    flex-direction: row;
+}
+
+.open-source-latest{
+    margin-bottom: 50px;
 }
 
 
