@@ -1,1 +1,1 @@
-web: gunicorn Last_Night_Preparation.wsgi --log-file -
+web: gunicorn devNITH.wsgi --log-file -
