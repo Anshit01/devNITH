@@ -1,5 +1,6 @@
 .hero-wrap{
     padding-top: 80px;
+    padding-bottom: 80px;
     background-color: #f6ebff;
 }
 
@@ -12,6 +13,19 @@
     margin-bottom: 35px;
 }
 
+.hero-section-btn{
+    display: block;
+    background-color:  #8e44ad;
+    color: #fff;
+    border-radius: 5px;
+    width: 100px;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+}
+
+.hero-section-btn:hover{
+    text-decoration: none;
+}
 
 
 
