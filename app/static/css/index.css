@@ -30,6 +30,17 @@
 
 .hero-section-img{
     width: 100%;
+}
+
+/* Intern Section */
+
+.intern-section-heading{
+    text-align: center;
+}
+
+.intern-section-subheading{
+    text-align: center;
+    letter-spacing: 4px;
     padding: 0;
     margin: 0;
 }
