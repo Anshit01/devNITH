@@ -173,5 +173,252 @@ hr{
     margin-bottom: 50px;
 }
 
+/* Explore more Open source Projects */
 
 
+.open-source-cards-section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f6ebff;
+}
+
+.open-source-section-heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.open-source-card-head {
+    background-color: #3c096c;
+    border-radius: 5px 5px 0 0;
+    padding: 40px;
+}
+
+.open-source-card-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #ecf0f1;
+}
+
+.open-source-card-time {
+    font-size: 14px;
+    color: #d6d8d8;
+    margin-bottom: 25px;
+}
+
+.open-source-card-apply-btn {
+    background-color: #7b2cbf;
+    width: fit-content;
+    padding: 5px 10px;
+    color: #e2e3e4;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.open-source-card-foot {
+    border: 2px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    padding: 40px;
+}
+
+.open-source-card-tags {
+    color: #8090BD !important;
+}
+
+.tech-tag{
+    padding: 8px 5px;
+}
+
+.img-tag{
+    width: 10%;
+}
+
+.open-source-card-description {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* upcoming */
+
+.coming-soon-section{
+    background-color: #f6ebff;
+}
+
+.coming-soon{
+    color:#3c096c;
+    /* font-size: 18px; */
+    font-weight: 500;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom:100px ;
+}
+
+
+  /******************************* Footer********************************************/
+
+  .site-footer
+{
+  background-color: #10002b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+}
+.site-footer hr
+{
+  border-top-color:#e0aaff;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h3
+{
+  color:#e0aaff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#fff;
+}
+.site-footer a:hover
+{
+  color:#fff;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#bdc3c7;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#e0aaff;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  /* background-color:#33353d */
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+
+.dev-name {
+  display: inline-block;
+  color: #fff;
+  width: 60px;
+}
+
+.social-icons
+{
+  padding-left:0;
+  /* margin-bottom:0; */
+  list-style:none;
+  display: inline;
+  white-space: nowrap;;
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px;
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  /* color:#96a2b2; */
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#bdc3c7;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.github:hover
+{
+  background-color:#0ead69
+}
+
+.copyright-text{
+    color: #bdc3c7;
+}
+
+.text-justify{
+    color: #bdc3c7;
+    font-weight: 300;
+}
+
+h3{
+    font-weight: 600;
+}
