@@ -1,0 +1,95 @@
+.page-wrap{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color:  #f6ebff;
+}
+
+.intern-heading{
+    margin-bottom: 30px;
+}
+
+.apply-flex{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.apply-button{
+    float: right;
+    border: 2px solid #8e44ad;
+    color: #8e44ad;
+    border-radius: 10px;
+    padding: 8px 8px 8px 8px;
+    font-weight: 600;
+}
+
+.about-section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.about{
+    margin-bottom: 20px;
+}
+
+/* contact */
+
+.contact-heading{
+    margin-bottom: 20px;
+}
+
+.email-section{
+    display: flex;
+    flex-direction: row;
+}
+
+.email-heading{
+    color: #8e44ad;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.phone-heading{
+    color: #8e44ad;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.phone-section{
+    display: flex;
+    flex-direction: row;
+}
+
+.tech-section{
+    margin-top: 30px;
+}
+
+.tags-flex{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.tag-heading{
+    margin-bottom: 20px;
+}
+
+.tag-row{
+    display: inline-block;
+    background-color: #8090BD;
+    padding: 8px 5px 8px 10px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.tag-icon{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.tag{
+    color: #333333;
+    margin-right: 10px;
+    color: #fff;
+}
