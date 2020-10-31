@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from django.contrib.auth.views import LoginView
 from . import forms
+from .models import InternshipPost, OpenSourcePost
 
 # Create your views here.
 def index_handler(request):
@@ -34,4 +35,19 @@ class Register (CreateView):
 	form_class = forms.UserCreateForm
 	success_url = reverse_lazy('login')
 	template_name='register.html'
+
+def dashboard_view(request):
+    if request.user.is_authenticated:
+        render(request, 'dashboard.html')
+
+def internship_post_form_view(request):
+    form = forms.InternshipPostCreateForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    
+    context = {
+        'form' : form
+    }
+    
+    return render(request, 'internship_post_form.html', context)
 
