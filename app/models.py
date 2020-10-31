@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import auth
 
 # Create your models here.
 
@@ -8,4 +9,4 @@ class Account(models.Model):
     phone = models.IntegerField(default=0)
     password = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
-    address = models.CharField(max_length=1000, blank=True)
+    bio = models.CharField(max_length=1000, blank=True)
