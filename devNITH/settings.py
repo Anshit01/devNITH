@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -89,7 +90,7 @@ if 'DATABASE_URL' in os.environ:
     DATABASE_URL = os.environ['DATABASE_URL']
 else:
     DATABASE_URL = config.DATABASE_URL
-DATABASES['default'] = dj_database_url.config(DATABASE_URL, conn_max_age=600, ssl_require=True)
+DATABASES['default'] = dj_database_url.config(default=DATABASE_URL, conn_max_age=600, ssl_require=True)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

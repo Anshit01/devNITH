@@ -9,3 +9,6 @@ def internship_handler(request):
 
 def open_source_handler(request):
     return render(request, 'open_source.html')
+
+def register_handler(request):
+    return render(request, 'register.html')
