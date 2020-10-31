@@ -4,7 +4,7 @@ from .models import Account
 
 class UserCreateForm(UserCreationForm):
 	class Meta:
-        model = Account
+        # model = Account
 		fields = ('username', 'email', 'password1', 'password2','organisation')
 		model = get_user_model()
         # model = Account
