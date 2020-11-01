@@ -3,7 +3,7 @@
 
 {% block head_block %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <title>devNITH</title>
 {% endblock %}
 
@@ -19,8 +19,14 @@
                       </p>
                     <p class="hero-section-recruiter">Got a Open Source Project or Startup idea??</p>
                     <div class="btn-group">
+                        
+                        {% if user.is_authenticated %}
+                        <a href="/add_internship_post" class="hero-section-btn btn-filled">Post an Internship</a>  
+                        <a href="add_open_source_post" class="hero-section-btn btn-hollow">Post an Open Source Project</a>
+                        {% else %}
                         <a href="/register" class="hero-section-btn btn-filled">Join Us</a>  
                         <a href="/login" class="hero-section-btn btn-hollow">Login</a>
+                        {% endif %}
                     </div>    
                      
                 </div>
