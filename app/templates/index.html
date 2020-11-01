@@ -85,22 +85,19 @@
                 <div class="col-md-5">
                     <div class="open-source-notification">
                         <h3 class="open-source-latest">Start Here</h3>
-
+                        {% for post in openSourcePosts %}
+                        <a href="/open_source/{{post.id}}">
                         <div class="project-card">
-                            <p class="open-source-projects"> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                            <p class="open-source-projects">
+                                <strong>{{post.title}}</strong><br>
+                                {{post.description|truncatechars:50}}
+                            </p>
                             <div class="arrow-icon"><img src="{% static 'images/Asset 1.svg' %}" class="arrow-img"></div>
-                        </div>  
-                        <hr>  
-                        <div class="project-card">
-                            <p class="open-source-projects"> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                            <div class="arrow-icon"><img src="{% static 'images/Asset 1.svg' %}" class="arrow-img"></div>
-                        </div> 
+                        </div>
+                        </a>
                         <hr>
-                        <div class="project-card">
-                            <p class="open-source-projects"> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                            <div class="arrow-icon"><img src="{% static 'images/Asset 1.svg' %}" class="arrow-img"></div>
-                        </div> 
-                        <hr>
+                        {% endfor %}
+                        
                     </div>    
                 </div>
             </div>
