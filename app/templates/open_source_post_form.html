@@ -10,15 +10,28 @@
 
 {% block body_block %}
 
-<div class="container ">
-
-    <h1>Create new Open Source Project Post</h1>
-    <form class="register-form" method="POST">
-        {% csrf_token %}
-        {% bootstrap_form form %}
-        <input type="submit" class="btn btn-primary" value="Post">
-    </form>
-
+<div class="page-wrap">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="img-wrap">
+                    <img src="{% static 'images/open-source.png' %}" class="open-img" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-wrap">
+                    <h2>Create new Open Source Project Post</h2>
+                    <form class="register-form" method="POST">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <input type="submit" class="open-source-btn" value="Post">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 
 {% endblock %}

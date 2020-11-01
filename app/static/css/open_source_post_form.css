@@ -1,0 +1,25 @@
+.open-img{
+    width: 100%;
+}
+
+.open-source-btn{
+    padding: 5px 35px 5px 35px;
+    background-color: #8e44ad;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+}
+
+.page-wrap{
+    background-color: #f6ebff;
+}
+
+.img-wrap{
+    margin-top: 100px;
+}
+
+.form-wrap{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
