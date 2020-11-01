@@ -21,8 +21,8 @@
                     <div class="btn-group">
                         
                         {% if user.is_authenticated %}
-                        <a href="/add_internship_post" class="hero-section-btn btn-filled">Post an Internship</a>  
-                        <a href="add_open_source_post" class="hero-section-btn btn-hollow">Post an Open Source Project</a>
+                        <a href="/add_internship_post" class="hero-section-btn btn-filled">Post an<br>Internship</a>  
+                        <a href="add_open_source_post" class="hero-section-btn btn-hollow">Post an Open<br>Source Project</a>
                         {% else %}
                         <a href="/register" class="hero-section-btn btn-filled">Join Us</a>  
                         <a href="/login" class="hero-section-btn btn-hollow">Login</a>
@@ -42,81 +42,34 @@
             <p class="intern-section-subheading">To get ahead , get started</p>
             <div class="row">
 
+                {% for post in internshipPosts %}
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="internship-card mx-5 mx-md-1">
                         <div class="card-head">
                             <p class="card-title">
-                                Lorem ipsum dolor sit
+                                {{post.title}}
                             </p>
                             <p class="card-time">
-                                Open till 9 Nov
+                                Open till {{post.last_date}}
                             </p>
-                            <div class="card-apply-btn">
-                                <span>Apply Now</span>
-                            </div>
+                            <a href="/internship/{{post.id}}">
+                                <div class="card-apply-btn">
+                                    <span>Apply Now</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="card-foot">
                             <div class="card-tags">
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag">Android</span>
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag">Backend</span>
+                                <span class="badge badge-pill badge-secondary card-tag">Android</span>
+                                <span class="badge badge-pill badge-secondary card-tag">Backend</span>
                             </div>
                             <p class="card-description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere animi dolore
+                                {{post.description|truncatechars:100}}
                             </p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="internship-card mx-5 mx-md-1">
-                        <div class="card-head">
-                            <p class="card-title">
-                                Lorem ipsum dolor sit
-                            </p>
-                            <p class="card-time">
-                                Open till 9 Nov
-                            </p>
-                            <div class="card-apply-btn">
-                                <span>Apply Now</span>
-                            </div>
-                        </div>
-                        <div class="card-foot">
-                            <div class="card-tags">
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag">Android</span>
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag">Backend</span>
-                            </div>
-                            <p class="card-description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere animi dolore
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="internship-card mx-5 mx-md-1">
-                        <div class="card-head">
-                            <p class="card-title">
-                                Lorem ipsum dolor sit
-                            </p>
-                            <p class="card-time">
-                                Open till 9 Nov
-                            </p>
-                            <div class="card-apply-btn">
-                                <span>Apply Now</span>
-                            </div>
-                        </div>
-                        <div class="card-foot">
-                            <div class="card-tags">
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag"><img src="{% static 'images/tag.png' %}" class="img-tag" />Android</span>
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag"><img src="{% static 'images/tag.png' %}" class="img-tag" />Backend</span>
-                            </div>
-                            <p class="card-description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere animi dolore
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>   
@@ -159,80 +112,34 @@
             <h2 class="open-source-section-heading">Explore More Open Source Project</h2>
             <div class="row">
 
+                {% for post in openSourcePosts %}
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="open-source-card mx-5 mx-md-1">
-                        <div class="open-source-card-head">
-                            <p class="open-source-card-title">
-                                Lorem ipsum dolor sit
-                            </p>
-                            <p class="open-source-card-time">
-                                Posted On October 31
-                            </p>
-                            <div class="open-source-card-apply-btn">
-                                <span>View on github</span>
-                            </div>
-                        </div>
-                        <div class="open-source-card-foot">
-                            <div class="open-source-card-tags">
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag">Android</span>
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag">Backend</span>
-                            </div>
-                            <p class="open-source-card-description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere animi dolore
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="open-source-card mx-5 mx-md-1">
+                    <div class="internship-card mx-5 mx-md-1">
                         <div class="card-head">
-                            <p class="open-source-card-title">
-                                Lorem ipsum dolor sit
+                            <p class="card-title">
+                                {{post.title}}
                             </p>
-                            <p class="open-source-card-time">
-                                Posted On October 31
+                            <p class="card-time">
+                                By {{post.maintainer_name}}
                             </p>
-                            <div class="open-source-card-apply-btn">
-                                <span>View on github</span>
-                            </div>
+                            <a href="/open_source/{{post.id}}">
+                                <div class="card-apply-btn">
+                                    <span>Apply Now</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="open-source-card-foot">
-                            <div class="open-source-card-tags">
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag">Android</span>
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag">Backend</span>
+                        <div class="card-foot">
+                            <div class="card-tags">
+                                <span class="badge badge-pill badge-secondary card-tag">Android</span>
+                                <span class="badge badge-pill badge-secondary card-tag">Backend</span>
                             </div>
-                            <p class="open-source-card-description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere animi dolore
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="open-source-card mx-5 mx-md-1">
-                        <div class="card-head">
-                            <p class="open-source-card-title">
-                                Lorem ipsum dolor sit
-                            </p>
-                            <p class="open-source-card-time">
-                                Posted On October 31
-                            </p>
-                            <div class="open-source-card-apply-btn">
-                                <span>View on github</span>
-                            </div>
-                        </div>
-                        <div class="open-source-card-foot">
-                            <div class="open-source-card-tags">
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag">Android</span>
-                                <span class="badge badge-pill badge-secondary card-tag tech-tag">Backend</span>
-                            </div>
-                            <p class="open-source-card-description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere animi dolore
+                            <p class="card-description">
+                                {{post.description|truncatechars:100}}
                             </p>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
 
             </div>
         </div>

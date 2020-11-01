@@ -17,8 +17,8 @@
 .hero-section-btn{
     display: block;
     border-radius: 5px;
-    width: 100px;
-    padding: 5px 10px 5px 10px;
+    /* width: 100px; */
+    padding: 5px 15px;
     text-align: center;
 }
 

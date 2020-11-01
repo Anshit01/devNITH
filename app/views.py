@@ -8,7 +8,11 @@ from .models import InternshipPost, OpenSourcePost
 
 # Create your views here.
 def index_handler(request):
-    return render(request, 'index.html')
+    context = {
+        'internshipPosts' : InternshipPost.objects.all()[0:3],
+        'openSourcePosts' : OpenSourcePost.objects.all()[0:3]
+    }
+    return render(request, 'index.html', context)
 
 def internship_handler(request):
     context = {
