@@ -1,0 +1,36 @@
+.good-luck{
+    width: 100%;
+}
+
+.img-wrap{
+    margin-top: 100px;
+}
+
+.intern-post-form{
+    background-color: #f6ebff;
+    /* padding-bottom: 50px;
+    padding-top: 5opx; */
+}
+
+.intern-post{
+    padding: 5px 35px 5px 35px;
+    background-color: #8e44ad;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+}
+
+.create{
+    margin-bottom: 30px;
+}
+
+.form-wrap{
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.label{
+    color: #10002b;
+    font-weight: 600;
+}

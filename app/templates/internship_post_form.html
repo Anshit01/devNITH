@@ -10,15 +10,26 @@
 
 {% block body_block %}
 
-<div class="container ">
-
-    <h1>Create new Internship Post</h1>
-    <form class="register-form" method="POST">
-        {% csrf_token %}
-        {% bootstrap_form form %}
-        <input type="submit" class="btn btn-primary" value="Post">
-    </form>
-
+<div class="intern-post-form">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-wrap">
+                    <h1 class="create">Create new Internship Post</h1>
+                    <form class="register-form" method="POST">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <input type="submit" class="intern-post" value="Post">
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="img-wrap">
+                    <img src="{% static 'images/intern-post.png' %}" class="good-luck" />
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
