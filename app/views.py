@@ -11,7 +11,10 @@ def index_handler(request):
     return render(request, 'index.html')
 
 def internship_handler(request):
-    return render(request, 'internship.html')
+    context = {
+        'posts' : InternshipPost.objects.all()
+    }
+    return render(request, 'internship.html', context)
 
 def internship_description_handler(request, id):
     context = {

@@ -40,14 +40,16 @@
 
         <div class="cards-section">
             <div class="row">
+                
+                {% for post in posts %}
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="internship-card mx-5 mx-md-1">
                         <div class="card-head">
                             <p class="card-title">
-                                Lorem ipsum dolor sit
+                                {{post.title}}
                             </p>
                             <p class="card-time">
-                                Open till 9 Nov
+                                Open till {{post.last_date}}
                             </p>
                             <div class="card-apply-btn">
                                 <span>Apply Now</span>
@@ -59,13 +61,15 @@
                                 <span class="badge badge-pill badge-secondary card-tag">Backend</span>
                             </div>
                             <p class="card-description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere animi dolore
+                                {{post.description|truncatechars:100}}
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
+            {% endfor %}
         </div>
 
+        </div>
+        
     </div>
 {% endblock %}
