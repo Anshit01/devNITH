@@ -51,3 +51,12 @@ def internship_post_form_view(request):
     
     return render(request, 'internship_post_form.html', context)
 
+def open_source_post_form_view(request):
+    form = forms.OpenSourcePostCreateForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    
+    context = {
+        'form' : form
+    }
+    return render(request, 'open_source_post_form.html', context)

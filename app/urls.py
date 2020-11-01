@@ -21,5 +21,7 @@ urlpatterns = [
 
     path('dashboard/', views.dashboard_view, name='dashboard'),
     path('add_internship_post/', views.internship_post_form_view, name='add_internship_post'),
-    
+    path('add_open_source_post/', views.open_source_post_form_view, name='add_open_source_post'),
+
+
 ]

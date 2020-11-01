@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django import forms
 
-from .models import InternshipPost
+from .models import InternshipPost, OpenSourcePost
 
 class UserCreateForm(UserCreationForm):
 	class Meta:
@@ -21,7 +21,22 @@ class InternshipPostCreateForm(forms.ModelForm):
 		model = InternshipPost
 		fields = [
 			'title',
-			'last_date',
 			'description',
-			'registration_link'
+			'last_date',
+			'registration_link',
+			'recruiter_name',
+			'recruiter_phone',
+			'recruiter_email',
+		]
+
+class OpenSourcePostCreateForm(forms.ModelForm):
+	class Meta:
+		model = OpenSourcePost
+		fields = [
+			'title',
+			'description',
+			'registration_link',
+			'maintainer_name',
+			'maintainer_phone',
+			'maintainer_email',
 		]

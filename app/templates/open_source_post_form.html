@@ -3,16 +3,16 @@
 {% load static %}
 
 {% block head_block %}
-    <link rel="stylesheet" href="{% static 'css/internship_post_form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/open_source_post_form.css' %}">
 
-    <title>Add new internship post</title>
+    <title>Add new Open Source Project</title>
 {% endblock %}
 
 {% block body_block %}
 
 <div class="container ">
 
-    <h1>Create new Internship Post</h1>
+    <h1>Create new Open Source Project Post</h1>
     <form class="register-form" method="POST">
         {% csrf_token %}
         {% bootstrap_form form %}
