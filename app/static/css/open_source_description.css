@@ -1,0 +1,60 @@
+.open-source-wrap{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.tech-section{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+
+.tag-icon{
+   width: 20px; 
+   margin-right: 5px;
+}
+
+.tech-row{
+    display: inline-block;
+    background-color: #8090BD;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.tag{
+    color: #fff;
+}
+
+.description{
+    /* margin-top: 40px; */
+    margin-bottom: 40px;
+}
+
+.about{
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.view{
+    color: #240046;
+    font-weight: 600;
+}
+
+.view:hover{
+    color: #240046;
+    cursor: pointer;
+}
+
+.maintainer{
+    font-weight: 600;
+}
+
+.github{
+    border: 2px solid #240046;
+    border-radius: 10px;
+    width: 170px;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+}
