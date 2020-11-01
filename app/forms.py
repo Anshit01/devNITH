@@ -35,7 +35,7 @@ class OpenSourcePostCreateForm(forms.ModelForm):
 		fields = [
 			'title',
 			'description',
-			'registration_link',
+			'github_link',
 			'maintainer_name',
 			'maintainer_phone',
 			'maintainer_email',

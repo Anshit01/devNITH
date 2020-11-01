@@ -51,9 +51,11 @@
                             <p class="card-time">
                                 Open till {{post.last_date}}
                             </p>
-                            <div class="card-apply-btn">
-                                <span>Apply Now</span>
-                            </div>
+                            <a href="/internship/{{post.id}}">
+                                <div class="card-apply-btn">
+                                    <span>Apply Now</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="card-foot">
                             <div class="card-tags">
@@ -67,7 +69,7 @@
                     </div>
                 </div>
             {% endfor %}
-        </div>
+            </div>
 
         </div>
         

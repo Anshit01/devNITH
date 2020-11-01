@@ -23,6 +23,10 @@
     font-weight: 600;
 }
 
+.description {
+    white-space: pre-wrap;
+}
+
 .about-section{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -36,6 +40,10 @@
 
 .contact-heading{
     margin-bottom: 20px;
+}
+
+.recruiter-name {
+    font-weight: 600;
 }
 
 .email-section{

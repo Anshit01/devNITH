@@ -18,16 +18,19 @@ def internship_handler(request):
 
 def internship_description_handler(request, id):
     context = {
-        "id" : id
+        'post' : InternshipPost.objects.filter(id=id)[0]
     }
     return render(request, 'internship_description.html', context)
 
 def open_source_handler(request):
-    return render(request, 'open_source.html')
+    context = {
+        'posts' : OpenSourcePost.objects.all()
+    }
+    return render(request, 'open_source.html', context)
 
 def open_source_description_handler(request, id):
     context = {
-        "id" : id
+        'post' : OpenSourcePost.objects.filter(id=id)[0]
     }
     return render(request, 'open_source_description.html', context)
 

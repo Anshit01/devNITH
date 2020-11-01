@@ -30,6 +30,7 @@
 .description{
     /* margin-top: 40px; */
     margin-bottom: 40px;
+    white-space: pre-wrap;
 }
 
 .about{
@@ -57,4 +58,36 @@
     width: 170px;
     padding: 5px 5px 5px 5px;
     text-align: center;
+}
+
+/* contact */
+
+.contact-heading{
+    margin-bottom: 20px;
+}
+
+.recruiter-name {
+    font-weight: 600;
+}
+
+.email-section{
+    display: flex;
+    flex-direction: row;
+}
+
+.email-heading{
+    color: #8e44ad;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.phone-heading{
+    color: #8e44ad;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.phone-section{
+    display: flex;
+    flex-direction: row;
 }

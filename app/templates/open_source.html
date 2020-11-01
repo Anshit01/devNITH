@@ -11,16 +11,66 @@
 {% block body_block %}
 
     <div class="header">
-        <div class="container">
-        <h1 class="heading">Discover Open Source</h1>
-        <p class="header-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque soluta, aliquam eos vel ullam saepe amet 
-            odio quos rem impedit veniam cum cupiditate, velit deserunt possimus hic natus repellat sint.
-        </p>
+        <div class="container text-center">
+            <h1 class="heading">Discover Open Source</h1>
+            <p class="header-text mx-auto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque soluta, aliquam eos vel ullam saepe amet 
+                odio quos rem impedit veniam cum cupiditate, velit deserunt possimus hic natus repellat sint.
+            </p>
         </div>
     </div>
     <div class="container">
-        
+        <div class="tags-section">
+            <div class="row">
+                <div class="col-sm-3 col-6 text-center">
+                    <span class="badge badge-pill badge-light tag">Android</span>
+                </div>
+                <div class="col-sm-3 col-6 text-center">
+                    <span class="badge badge-pill badge-light tag">Full Stack</span>
+                </div>
+                <div class="col-sm-3 col-6 text-center">
+                    <span class="badge badge-pill badge-light tag">Web Frontend</span>
+                </div>
+                <div class="col-sm-3 col-6 text-center">
+                    <span class="badge badge-pill badge-light tag">Backend</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-section">
+            <div class="row">
+                
+                {% for post in posts %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="internship-card mx-5 mx-md-1">
+                        <div class="card-head">
+                            <p class="card-title">
+                                {{post.title}}
+                            </p>
+                            <p class="card-time">
+                                By {{post.maintainer_name}}
+                            </p>
+                            <a href="/open_source/{{post.id}}">
+                                <div class="card-apply-btn">
+                                    <span>Apply Now</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-foot">
+                            <div class="card-tags">
+                                <span class="badge badge-pill badge-secondary card-tag">Android</span>
+                                <span class="badge badge-pill badge-secondary card-tag">Backend</span>
+                            </div>
+                            <p class="card-description">
+                                {{post.description|truncatechars:100}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+
+        </div>
     </div>
 
 

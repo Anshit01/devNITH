@@ -13,9 +13,9 @@
 <div class="open-source-wrap">
     <div class="container">
 
-        <h2 class="open-source-heading">Geliose Mobility</h2>
-        <p class="posted-on"><strong>Posted On</strong> October 31, 2020</p>
-        <p class="maintainer"><i>Anshit</i></p>
+        <h2 class="open-source-heading">{{post.title}}</h2>
+        <!-- <p class="posted-on"><strong>Posted On</strong> October 31, 2020</p> -->
+        <p class="maintainer"> By <i><strong>{{post.maintainer_name}}</strong></i></p>
         <div class="tech-section">
             <div class="tech-row">
                 <img src="{%static 'images/tag.png' %}" class="tag-icon" />
@@ -35,6 +35,15 @@
         <div class="description">
             <h4 class="about">Description</h4>
             <div class="row">
+                <div class="col-md-8">
+                    <div class="description">
+                
+                        {{post.description}}
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
                 <div class="col-md-6">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -64,12 +73,27 @@
                     </p>
                 </div>
             </div>
-    
+     -->
+        </div>
+
+        <div class="contact">
+            <h4 class="contact-heading">Contact</h4>
+            <p class="recruiter-name">{{post.maintainer_name}}</p>
+            <div class="email-section">
+                <p class="email-heading">email - </p>
+                <p class="email-written">{{post.maintainer_email}}</p>
+            </div>
+            <div class="phone-section">
+                <p class="phone-heading">Phone No. - </p>
+                <p class="phone-no.">{{post.maintainer_phone}}</p>
+            </div>
         </div>
        
+        <a href="{{post.github_link}}">
         <div class="github">
-            <a class="view">View On Github</a>
+            <span class="view">View On Github</span>
         </div>
+        </a>
 
     </div>
 </div>

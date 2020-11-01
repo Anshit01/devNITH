@@ -31,7 +31,7 @@ class OpenSourcePost(models.Model):
     # posted_on = models.DateField()
     # tags = ArrayField(models.CharField(max_length=50), blank=True)
     description = models.TextField()
-    registration_link = models.CharField(max_length=1000)
+    github_link = models.CharField(max_length=1000)
     maintainer_name = models.CharField(max_length=100)
     maintainer_phone = models.CharField(max_length=10)
     maintainer_email = models.EmailField()

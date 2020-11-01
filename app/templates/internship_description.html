@@ -12,57 +12,69 @@
 
     <div class="page-wrap">
         <div class="container">
-            <h2 class="intern-heading">Android Developer Intern</h2>
-            <p class="posted-on"><strong>Posted On</strong> October 31, 20202</p>
+            <h2 class="intern-heading">{{post.title}}</h2>
+            <p class="posted-on">By <strong>{{post.recruiter_name}}</strong></p>
+            <!-- <p class="posted-on"><strong>Posted On</strong> October 31, 20202</p> -->
             <div class="apply-flex">
-                <p class="last-date"><strong>Last Date to Apply</strong> - November 15, 2020</p>
-                <a href="#" class="apply-button ml-auto">Apply Now</a>
+                <p class="last-date"><strong>Last Date to Apply</strong> - {{post.last_date}}</p>
+                <a href="{{post.registration_link}}" class="apply-button ml-auto">Apply Now</a>
             </div>
             <hr>
             <div class="about-section">
                 <h4 class="about">About Position</h4>
                 <div class="row">
-                    <div class="col-md-6">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
-                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam. 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
-                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
-                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam. 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
-                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam.
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
-                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam. 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
-                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam.
-                        </p>
+                    <div class="col-md-8">
+                        <div class="description">
+                    
+                            {{post.description}}
+                            
+                        </div>
                     </div>
                 </div>
+                
+                <!-- <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
+                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
+                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
+                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
+                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
+                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Suspendisse elit magna, sagittis at scelerisque ut, aliquet quis nibh.
+                            Duis sit amet ante rutrum, eleifend lorem molestie, auctor diam.
+                        </p>
+                    </div>
+                </div> -->
             </div>
             
 
             <div class="contact">
                 <h4 class="contact-heading">Contact</h4>
+                <p class="recruiter-name">{{post.recruiter_name}}</p>
                 <div class="email-section">
                     <p class="email-heading">email - </p>
-                    <p class="email-written">anshit.bhardwaj1379@gmail.com</p>
+                    <p class="email-written">{{post.recruiter_email}}</p>
                 </div>
                 <div class="phone-section">
                     <p class="phone-heading">Phone No. - </p>
-                    <p class="phone-no.">547326476489</p>
+                    <p class="phone-no.">{{post.recruiter_phone}}</p>
                 </div>
             </div>
 
